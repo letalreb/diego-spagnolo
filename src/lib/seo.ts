@@ -22,6 +22,7 @@ export function jsonLdPerson() {
     "@type": "Person",
     name: site.name,
     url: site.url,
+    sameAs: ["https://www.linkedin.com/in/diego-spagnolo/"],
     email: "mailto:diego.spagnolo.mi@gmail.com",
     telephone: "+39 339 4217253",
     address: {

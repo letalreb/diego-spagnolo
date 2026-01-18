@@ -15,6 +15,14 @@ export function Footer() {
             Email
           </a>
           <a
+            href="https://www.linkedin.com/in/diego-spagnolo/"
+            target="_blank"
+            rel="noreferrer"
+            className="text-black/70 hover:text-black dark:text-white/70 dark:hover:text-white"
+          >
+            LinkedIn
+          </a>
+          <a
             href="/privacy"
             className="text-black/70 hover:text-black dark:text-white/70 dark:hover:text-white"
           >

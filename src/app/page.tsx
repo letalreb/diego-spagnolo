@@ -273,6 +273,14 @@ export default function Home() {
                   >
                     PEC: diego.spagnolo@arubapec.it
                   </a>
+                  <a
+                    href="https://www.linkedin.com/in/diego-spagnolo/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center justify-center rounded-full border border-black/10 bg-white px-6 py-3 text-sm font-medium text-black transition hover:bg-black/[0.02] dark:border-white/10 dark:bg-black dark:text-white dark:hover:bg-white/10"
+                  >
+                    LinkedIn
+                  </a>
                 </div>
 
                 <div className="mt-6 grid gap-3 text-sm text-black/70 dark:text-white/70 sm:grid-cols-2">
