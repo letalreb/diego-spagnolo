@@ -36,7 +36,7 @@ export default function OpenGraphImage() {
             maxWidth: 900,
           }}
         >
-          Portfolio, progetti e contatti — Next.js + SEO + AI.
+          Dottore Commercialista · Revisore Contabile · Consulenza finanziaria aziendale.
         </div>
         <div style={{ marginTop: 42, fontSize: 18, opacity: 0.75 }}>
           {site.url.replace(/^https?:\/\//, "")}

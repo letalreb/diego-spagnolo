@@ -1,8 +1,8 @@
 import { Container } from "@/components/Container";
 import { Section } from "@/components/Section";
 import { Reveal } from "@/components/Reveal";
-import { projects, services } from "@/content/site";
-import { jsonLdPerson, site } from "@/lib/seo";
+import { areas, services } from "@/content/site";
+import { jsonLdPerson, jsonLdProfessionalService, site } from "@/lib/seo";
 import { ArrowRight, Check } from "lucide-react";
 
 export default function Home() {
@@ -12,48 +12,55 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdPerson()) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLdProfessionalService()),
+        }}
+      />
 
       <div className="relative overflow-hidden">
-        <div className="pointer-events-none absolute inset-0 -z-10 opacity-60 [background:radial-gradient(900px_circle_at_20%_10%,rgba(99,102,241,0.25),transparent_60%),radial-gradient(700px_circle_at_80%_20%,rgba(16,185,129,0.18),transparent_55%)] dark:opacity-50" />
+        <div className="pointer-events-none absolute inset-0 -z-10 opacity-70 [background:radial-gradient(900px_circle_at_20%_10%,rgba(37,99,235,0.22),transparent_60%),radial-gradient(700px_circle_at_80%_20%,rgba(245,158,11,0.18),transparent_55%)] dark:opacity-50" />
 
         <Section className="pt-16 sm:pt-24">
           <Container>
             <div className="grid items-center gap-10 md:grid-cols-2">
               <Reveal>
                 <p className="inline-flex items-center rounded-full border border-black/10 bg-white/60 px-3 py-1 text-xs text-black/70 backdrop-blur dark:border-white/10 dark:bg-white/5 dark:text-white/70">
-                  Next.js · SEO · Performance · AI
+                  Dottore Commercialista · Revisore Contabile · Finanza aziendale
                 </p>
                 <h1 className="mt-5 text-4xl font-semibold tracking-tight text-black dark:text-white sm:text-5xl">
-                  Un sito veloce, pulito e pronto per crescere.
+                  Chiarezza, metodo e numeri: supporto per imprese e professionisti.
                 </h1>
                 <p className="mt-4 max-w-xl text-lg leading-8 text-black/70 dark:text-white/70">
-                  Creo esperienze web moderne ottimizzate per ricerca, conversione e automazioni.
-                  Questo progetto è una base Next.js pensata per SEO e un assistente AI integrato.
+                  Dott. Diego Spagnolo — Dottore Commercialista iscritto all’ODCEC di Monza e della
+                  Brianza (Sez. A n. 1707), Revisore Contabile iscritto al Registro dei Revisori
+                  Legali (n. 170144), Consulente finanziario aziendale.
                 </p>
                 <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                   <a
                     href="#contact"
                     className="inline-flex items-center justify-center gap-2 rounded-full bg-black px-6 py-3 text-sm font-medium text-white transition hover:bg-black/90 dark:bg-white dark:text-black dark:hover:bg-white/90"
                   >
-                    Parliamone
+                    Richiedi un contatto
                     <ArrowRight className="h-4 w-4" />
                   </a>
                   <a
-                    href="#projects"
+                    href="#services"
                     className="inline-flex items-center justify-center rounded-full border border-black/10 bg-white/60 px-6 py-3 text-sm font-medium text-black transition hover:bg-white dark:border-white/10 dark:bg-white/5 dark:text-white dark:hover:bg-white/10"
                   >
-                    Vedi progetti
+                    Vedi servizi
                   </a>
                 </div>
                 <div className="mt-8 grid gap-2 text-sm text-black/70 dark:text-white/70 sm:grid-cols-2">
                   {[
-                    "Core Web Vitals + performance budget",
-                    "Metadata e structured data",
-                    "Sitemap/robots + canonical",
-                    "Assistente AI configurabile",
+                    "Consulenza contabile e fiscale",
+                    "Bilanci e supporto societario",
+                    "Revisione contabile",
+                    "Consulenza finanziaria aziendale",
                   ].map((t) => (
                     <div key={t} className="flex items-center gap-2">
-                      <Check className="h-4 w-4 text-emerald-600 dark:text-emerald-400" />
+                      <Check className="h-4 w-4 text-blue-600 dark:text-blue-400" />
                       <span>{t}</span>
                     </div>
                   ))}
@@ -64,39 +71,42 @@ export default function Home() {
                 <div className="rounded-3xl border border-black/10 bg-white/60 p-6 shadow-sm backdrop-blur dark:border-white/10 dark:bg-white/5">
                   <div className="space-y-4">
                     <div className="rounded-2xl bg-black/5 p-4 text-sm text-black/80 dark:bg-white/10 dark:text-white/80">
-                      <div className="text-xs text-black/60 dark:text-white/60">
-                        AI agent demo
-                      </div>
-                      <div className="mt-1 font-medium">Chiedi: “Che servizi offri?”</div>
+                      <div className="text-xs text-black/60 dark:text-white/60">Studio</div>
+                      <div className="mt-1 font-medium">Dott. Diego Spagnolo</div>
                       <div className="mt-2 text-black/60 dark:text-white/60">
-                        Il widget in basso a destra usa /api/agent.
+                        ODCEC Monza e Brianza — Sez. A n. 1707 · Revisori Legali n. 170144
                       </div>
                     </div>
                     <div className="grid grid-cols-2 gap-3">
                       <div className="rounded-2xl border border-black/10 bg-white p-4 dark:border-white/10 dark:bg-black">
-                        <div className="text-xs text-black/60 dark:text-white/60">SEO</div>
+                        <div className="text-xs text-black/60 dark:text-white/60">Metodo</div>
                         <div className="mt-1 text-sm font-semibold text-black dark:text-white">
-                          Struttura
+                          Approccio chiaro
                         </div>
                       </div>
                       <div className="rounded-2xl border border-black/10 bg-white p-4 dark:border-white/10 dark:bg-black">
-                        <div className="text-xs text-black/60 dark:text-white/60">DX</div>
+                        <div className="text-xs text-black/60 dark:text-white/60">Operatività</div>
                         <div className="mt-1 text-sm font-semibold text-black dark:text-white">
-                          TS + App Router
+                          Supporto continuo
                         </div>
                       </div>
                       <div className="rounded-2xl border border-black/10 bg-white p-4 dark:border-white/10 dark:bg-black">
-                        <div className="text-xs text-black/60 dark:text-white/60">Perf</div>
+                        <div className="text-xs text-black/60 dark:text-white/60">Controllo</div>
                         <div className="mt-1 text-sm font-semibold text-black dark:text-white">
-                          Minimal JS
+                          Revisione
                         </div>
                       </div>
                       <div className="rounded-2xl border border-black/10 bg-white p-4 dark:border-white/10 dark:bg-black">
-                        <div className="text-xs text-black/60 dark:text-white/60">Deploy</div>
+                        <div className="text-xs text-black/60 dark:text-white/60">Finanza</div>
                         <div className="mt-1 text-sm font-semibold text-black dark:text-white">
-                          Vercel-ready
+                          Pianificazione
                         </div>
                       </div>
+                    </div>
+                    <div className="rounded-2xl border border-black/10 bg-white p-4 text-sm text-black/70 dark:border-white/10 dark:bg-black dark:text-white/70">
+                      <span className="font-medium text-black dark:text-white">Hai una domanda?</span>{" "}
+                      Puoi usare l’assistente (in basso a destra) per informazioni generali e per
+                      capire come contattare lo Studio.
                     </div>
                   </div>
                 </div>
@@ -109,31 +119,31 @@ export default function Home() {
           <Container>
             <Reveal>
               <h2 className="text-2xl font-semibold tracking-tight text-black dark:text-white sm:text-3xl">
-                Chi sono
+                Lo Studio
               </h2>
               <p className="mt-3 max-w-3xl text-base leading-7 text-black/70 dark:text-white/70">
-                Sono Diego Spagnolo. Mi occupo di sviluppo web e ottimizzazione: costruisco siti
-                veloci e mantenibili, con attenzione a SEO tecnico, accessibilità e qualità del
-                codice.
+                Sono Diego Spagnolo, Dottore Commercialista e Revisore Contabile. Affianco
+                imprese e professionisti con un approccio pratico: capire i numeri, impostare un
+                metodo e prendere decisioni migliori.
               </p>
               <p className="mt-3 max-w-3xl text-base leading-7 text-black/70 dark:text-white/70">
-                Questo repository è una base moderna con Next.js + integrazione AI: puoi adattarla
-                ai tuoi contenuti e pubblicarla rapidamente.
+                Le attività includono consulenza contabile e fiscale, supporto societario, revisione
+                contabile e consulenza finanziaria aziendale.
               </p>
             </Reveal>
           </Container>
         </Section>
 
-        <Section id="projects" className="bg-black/[0.02] dark:bg-white/[0.03]">
+        <Section id="areas" className="bg-black/[0.02] dark:bg-white/[0.03]">
           <Container>
             <Reveal>
               <div className="flex items-end justify-between gap-6">
                 <div>
                   <h2 className="text-2xl font-semibold tracking-tight text-black dark:text-white sm:text-3xl">
-                    Progetti
+                    Aree di attività
                   </h2>
                   <p className="mt-3 max-w-2xl text-base text-black/70 dark:text-white/70">
-                    Alcuni esempi (placeholder): sostituiscili con case study reali.
+                    Ambiti principali di intervento e supporto.
                   </p>
                 </div>
                 <a
@@ -146,7 +156,7 @@ export default function Home() {
             </Reveal>
 
             <div className="mt-10 grid gap-6 md:grid-cols-2">
-              {projects.map((p, idx) => (
+              {areas.map((p, idx) => (
                 <Reveal key={p.title} delay={0.05 * idx}>
                   <a
                     href={p.href}
@@ -185,7 +195,7 @@ export default function Home() {
                 Servizi
               </h2>
               <p className="mt-3 max-w-2xl text-base text-black/70 dark:text-white/70">
-                Interventi concreti e misurabili, dalla base tecnica alla pubblicazione.
+                Interventi concreti e impostazione chiara, in base alle esigenze.
               </p>
             </Reveal>
 
@@ -206,6 +216,39 @@ export default function Home() {
           </Container>
         </Section>
 
+        <Section id="credentials">
+          <Container>
+            <Reveal>
+              <h2 className="text-2xl font-semibold tracking-tight text-black dark:text-white sm:text-3xl">
+                Credenziali
+              </h2>
+              <p className="mt-3 max-w-3xl text-base leading-7 text-black/70 dark:text-white/70">
+                Dottore Commercialista iscritto all’ODCEC di Monza e della Brianza — Sezione A
+                n. 1707. Revisore Contabile iscritto al Registro dei Revisori Legali con numero
+                progressivo 170144.
+              </p>
+              <div className="mt-8 grid gap-4 md:grid-cols-2">
+                <div className="rounded-3xl border border-black/10 bg-white p-6 dark:border-white/10 dark:bg-black">
+                  <div className="text-xs text-black/60 dark:text-white/60">ODCEC</div>
+                  <div className="mt-1 text-base font-semibold text-black dark:text-white">
+                    Monza e della Brianza · Sezione A
+                  </div>
+                  <div className="mt-2 text-sm text-black/70 dark:text-white/70">Iscrizione n. 1707</div>
+                </div>
+                <div className="rounded-3xl border border-black/10 bg-white p-6 dark:border-white/10 dark:bg-black">
+                  <div className="text-xs text-black/60 dark:text-white/60">Revisori Legali</div>
+                  <div className="mt-1 text-base font-semibold text-black dark:text-white">
+                    Registro dei Revisori Legali
+                  </div>
+                  <div className="mt-2 text-sm text-black/70 dark:text-white/70">
+                    Numero progressivo 170144
+                  </div>
+                </div>
+              </div>
+            </Reveal>
+          </Container>
+        </Section>
+
         <Section id="contact" className="bg-black/[0.02] dark:bg-white/[0.03]">
           <Container>
             <Reveal>
@@ -214,8 +257,8 @@ export default function Home() {
                   Contatti
                 </h2>
                 <p className="mt-3 max-w-2xl text-base text-black/70 dark:text-white/70">
-                  Hai un progetto o vuoi rifare il sito? Scrivimi due righe e ti rispondo con una
-                  proposta chiara (tempi, costi e priorità).
+                  Vuoi fissare un primo contatto o chiedere informazioni? Scrivi due righe:
+                  risponderò con indicazioni chiare sul prossimo passo.
                 </p>
                 <div className="mt-7 flex flex-col gap-3 sm:flex-row">
                   <a
@@ -232,7 +275,8 @@ export default function Home() {
                   </button>
                 </div>
                 <p className="mt-4 text-xs text-black/50 dark:text-white/50">
-                  Nota: il widget AI è una demo; in produzione va collegato al tuo knowledge base.
+                  Nota: l’assistente AI fornisce informazioni generali e non sostituisce una
+                  consulenza professionale.
                 </p>
               </div>
             </Reveal>

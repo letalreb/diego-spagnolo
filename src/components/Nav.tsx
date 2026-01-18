@@ -11,6 +11,9 @@ export function Nav() {
           className="font-semibold tracking-tight text-black dark:text-white"
         >
           Diego Spagnolo
+          <span className="ml-2 hidden align-middle text-xs font-normal text-black/60 dark:text-white/60 sm:inline">
+            Dottore Commercialista
+          </span>
         </Link>
         <nav className="hidden items-center gap-6 md:flex">
           {navLinks.map((l) => (
@@ -28,7 +31,7 @@ export function Nav() {
             href="#contact"
             className="hidden rounded-full bg-black px-4 py-2 text-sm font-medium text-white transition hover:bg-black/90 dark:bg-white dark:text-black dark:hover:bg-white/90 sm:inline-flex"
           >
-            Contattami
+            Contatti
           </a>
           <ThemeToggle />
         </div>

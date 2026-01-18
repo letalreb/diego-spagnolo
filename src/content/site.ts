@@ -1,39 +1,56 @@
 export const navLinks = [
-  { href: "#about", label: "Chi sono" },
-  { href: "#projects", label: "Progetti" },
+  { href: "#about", label: "Studio" },
+  { href: "#areas", label: "Aree" },
   { href: "#services", label: "Servizi" },
+  { href: "#credentials", label: "Credenziali" },
   { href: "#contact", label: "Contatti" },
 ];
 
-export const projects = [
+export const areas = [
   {
-    title: "Progetto 1",
-    description: "Descrizione breve del progetto: obiettivo, stack e risultato.",
-    href: "#",
-    tags: ["Next.js", "SEO", "UI"],
+    title: "Contabilità e adempimenti",
+    description:
+      "Gestione contabile ordinaria e supporto operativo per adempimenti periodici.",
+    href: "#contact",
+    tags: ["Contabilità", "Adempimenti"],
   },
   {
-    title: "Progetto 2",
-    description: "Un secondo case study con focus su performance e conversione.",
-    href: "#",
-    tags: ["TypeScript", "Tailwind", "DX"],
+    title: "Bilanci e consulenza societaria",
+    description:
+      "Assistenza nella predisposizione dei bilanci e consulenza nella gestione societaria.",
+    href: "#contact",
+    tags: ["Bilanci", "Societario"],
+  },
+  {
+    title: "Revisione legale",
+    description:
+      "Attività di revisione e controllo secondo i requisiti e le best practice applicabili.",
+    href: "#contact",
+    tags: ["Revisione", "Controllo"],
+  },
+  {
+    title: "Consulenza finanziaria aziendale",
+    description:
+      "Analisi economico-finanziaria, pianificazione e supporto alle decisioni.",
+    href: "#contact",
+    tags: ["Finanza", "Pianificazione"],
   },
 ];
 
 export const services = [
   {
-    title: "Siti e landing pages",
+    title: "Consulenza contabile e fiscale",
     description:
-      "Design moderno, performance elevate, tracking pulito e struttura SEO pronta per crescere.",
+      "Supporto operativo e consulenziale per imprese e professionisti, con impostazione chiara e pragmatica.",
   },
   {
-    title: "SEO tecnico",
+    title: "Revisione contabile",
     description:
-      "Metadata, sitemap/robots, structured data e miglioramenti Web Vitals con approccio misurabile.",
+      "Incarichi di revisione e attività collegate, con attenzione a metodo, documentazione e tempi.",
   },
   {
-    title: "AI assistant per il sito",
+    title: "Finanza aziendale",
     description:
-      "Un assistente conversazionale per rispondere alle domande e guidare l’utente (configurabile via API).",
+      "Supporto a budgeting, analisi di marginalità, cash flow e lettura dei numeri per decidere meglio.",
   },
 ];

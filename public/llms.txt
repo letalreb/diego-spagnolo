@@ -1,11 +1,16 @@
-# Diego Spagnolo — sito
+# Diego Spagnolo — Studio
 
-Questo sito contiene una presentazione personale, una selezione di progetti e i contatti.
+Questo sito presenta lo Studio del Dott. Diego Spagnolo.
+
+Ruoli:
+- Dottore Commercialista (ODCEC Monza e della Brianza, Sez. A n. 1707)
+- Revisore Contabile (Registro dei Revisori Legali, n. 170144)
+- Consulente finanziario aziendale
 
 Contenuti principali:
-- / : Home (chi sono, progetti, servizi, contatti)
+- / : Home (studio, aree di attività, servizi, credenziali, contatti)
 
 Contatto:
 - Email: hello@diegospagnolo.com
 
-Nota: alcune informazioni potrebbero essere sintetiche; se serve un dettaglio, chiedi via email.
+Nota: questo sito non fornisce consulenza personalizzata; per casi specifici è necessario un contatto diretto.

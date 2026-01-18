@@ -2,10 +2,11 @@ const fallbackSiteUrl = "https://www.diegospagnolo.com";
 
 export const site = {
   name: "Diego Spagnolo",
+  title: "Diego Spagnolo · Dottore Commercialista",
   url: process.env.NEXT_PUBLIC_SITE_URL || fallbackSiteUrl,
   locale: "it_IT",
   description:
-    "Sito personale e portfolio: progetti, servizi e contatti. Realizzato con Next.js e ottimizzato per SEO.",
+    "Dottore Commercialista iscritto all’ODCEC di Monza e Brianza (Sez. A n. 1707). Revisore Contabile iscritto al Registro dei Revisori Legali (n. 170144). Consulenza finanziaria aziendale.",
   twitter: "@",
 };
 
@@ -21,5 +22,33 @@ export function jsonLdPerson() {
     "@type": "Person",
     name: site.name,
     url: site.url,
+    jobTitle: [
+      "Dottore Commercialista",
+      "Revisore Contabile",
+      "Consulente finanziario aziendale",
+    ],
+    identifier: [
+      {
+        "@type": "PropertyValue",
+        name: "ODCEC Monza e della Brianza – Sezione A",
+        value: "n. 1707",
+      },
+      {
+        "@type": "PropertyValue",
+        name: "Registro dei Revisori Legali",
+        value: "n. 170144",
+      },
+    ],
+  };
+}
+
+export function jsonLdProfessionalService() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "AccountingService",
+    name: site.title,
+    url: site.url,
+    areaServed: "IT",
+    provider: jsonLdPerson(),
   };
 }
