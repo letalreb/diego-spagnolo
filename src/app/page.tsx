@@ -4,6 +4,7 @@ import { Reveal } from "@/components/Reveal";
 import { areas, services } from "@/content/site";
 import { jsonLdPerson, jsonLdProfessionalService, site } from "@/lib/seo";
 import { ArrowRight, Check } from "lucide-react";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -68,8 +69,20 @@ export default function Home() {
               </Reveal>
 
               <Reveal delay={0.1}>
-                <div className="rounded-3xl border border-black/10 bg-white/60 p-6 shadow-sm backdrop-blur dark:border-white/10 dark:bg-white/5">
-                  <div className="space-y-4">
+                <div className="overflow-hidden rounded-3xl border border-black/10 bg-white/60 shadow-sm backdrop-blur dark:border-white/10 dark:bg-white/5">
+                  <div className="relative aspect-[16/10]">
+                    <Image
+                      src="/images/studio-hero.svg"
+                      alt="Studio professionale moderno"
+                      fill
+                      priority
+                      sizes="(min-width: 768px) 520px, 100vw"
+                      className="object-cover"
+                    />
+                    <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-white/70 via-white/10 to-transparent dark:from-black/60 dark:via-black/10" />
+                  </div>
+
+                  <div className="space-y-4 p-6">
                     <div className="rounded-2xl bg-black/5 p-4 text-sm text-black/80 dark:bg-white/10 dark:text-white/80">
                       <div className="text-xs text-black/60 dark:text-white/60">Studio</div>
                       <div className="mt-1 font-medium">Dott. Diego Spagnolo</div>
@@ -117,20 +130,56 @@ export default function Home() {
 
         <Section id="about">
           <Container>
-            <Reveal>
-              <h2 className="text-2xl font-semibold tracking-tight text-black dark:text-white sm:text-3xl">
-                Lo Studio
-              </h2>
-              <p className="mt-3 max-w-3xl text-base leading-7 text-black/70 dark:text-white/70">
-                Sono Diego Spagnolo, Dottore Commercialista e Revisore Contabile. Affianco
-                imprese e professionisti con un approccio pratico: capire i numeri, impostare un
-                metodo e prendere decisioni migliori.
-              </p>
-              <p className="mt-3 max-w-3xl text-base leading-7 text-black/70 dark:text-white/70">
-                Le attività includono consulenza contabile e fiscale, supporto societario, revisione
-                contabile e consulenza finanziaria aziendale.
-              </p>
-            </Reveal>
+            <div className="grid gap-10 md:grid-cols-2 md:items-center">
+              <Reveal>
+                <h2 className="text-2xl font-semibold tracking-tight text-black dark:text-white sm:text-3xl">
+                  Lo Studio
+                </h2>
+                <p className="mt-3 max-w-3xl text-base leading-7 text-black/70 dark:text-white/70">
+                  Sono Diego Spagnolo, Dottore Commercialista e Revisore Contabile. Affianco
+                  imprese e professionisti con un approccio pratico: capire i numeri, impostare un
+                  metodo e prendere decisioni migliori.
+                </p>
+                <p className="mt-3 max-w-3xl text-base leading-7 text-black/70 dark:text-white/70">
+                  Le attività includono consulenza contabile e fiscale, supporto societario, revisione
+                  contabile e consulenza finanziaria aziendale.
+                </p>
+                <div className="mt-6 grid gap-3 text-sm text-black/70 dark:text-white/70 sm:grid-cols-2">
+                  {["Primo contatto rapido", "Documenti e scadenze sotto controllo", "Supporto continuativo", "Comunicazione chiara"].map(
+                    (t) => (
+                      <div key={t} className="flex items-center gap-2">
+                        <span className="h-1.5 w-1.5 rounded-full bg-blue-600 dark:bg-blue-400" />
+                        <span>{t}</span>
+                      </div>
+                    ),
+                  )}
+                </div>
+              </Reveal>
+
+              <Reveal delay={0.08}>
+                <div className="overflow-hidden rounded-3xl border border-black/10 bg-white/60 shadow-sm backdrop-blur dark:border-white/10 dark:bg-white/5">
+                  <div className="relative aspect-[7/5]">
+                    <Image
+                      src="/images/studio-meeting.svg"
+                      alt="Riunione in studio professionale"
+                      fill
+                      sizes="(min-width: 768px) 520px, 100vw"
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-6 text-sm text-black/70 dark:text-white/70">
+                    <div className="text-xs text-black/50 dark:text-white/50">Approccio</div>
+                    <div className="mt-1 font-medium text-black dark:text-white">
+                      Analisi, operatività e controllo
+                    </div>
+                    <p className="mt-2 leading-6">
+                      Obiettivo: rendere le decisioni più semplici, con numeri leggibili e un metodo
+                      sostenibile nel tempo.
+                    </p>
+                  </div>
+                </div>
+              </Reveal>
+            </div>
           </Container>
         </Section>
 
@@ -190,19 +239,35 @@ export default function Home() {
 
         <Section id="services">
           <Container>
-            <Reveal>
-              <h2 className="text-2xl font-semibold tracking-tight text-black dark:text-white sm:text-3xl">
-                Servizi
-              </h2>
-              <p className="mt-3 max-w-2xl text-base text-black/70 dark:text-white/70">
-                Interventi concreti e impostazione chiara, in base alle esigenze.
-              </p>
-            </Reveal>
+            <div className="grid gap-8 lg:grid-cols-[1.2fr_.8fr] lg:items-end">
+              <Reveal>
+                <h2 className="text-2xl font-semibold tracking-tight text-black dark:text-white sm:text-3xl">
+                  Servizi
+                </h2>
+                <p className="mt-3 max-w-2xl text-base text-black/70 dark:text-white/70">
+                  Interventi concreti e impostazione chiara, in base alle esigenze.
+                </p>
+              </Reveal>
+
+              <Reveal delay={0.08}>
+                <div className="overflow-hidden rounded-3xl border border-black/10 bg-white/60 shadow-sm backdrop-blur dark:border-white/10 dark:bg-white/5">
+                  <div className="relative aspect-[7/5]">
+                    <Image
+                      src="/images/studio-docs.svg"
+                      alt="Documenti e strumenti professionali"
+                      fill
+                      sizes="(min-width: 1024px) 420px, 100vw"
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
+              </Reveal>
+            </div>
 
             <div className="mt-10 grid gap-6 md:grid-cols-3">
               {services.map((s, idx) => (
                 <Reveal key={s.title} delay={0.04 * idx}>
-                  <div className="rounded-3xl border border-black/10 bg-white p-6 dark:border-white/10 dark:bg-black">
+                  <div className="rounded-3xl border border-black/10 bg-white p-6 transition hover:-translate-y-0.5 hover:border-black/20 hover:shadow-sm dark:border-white/10 dark:bg-black dark:hover:border-white/20">
                     <h3 className="text-base font-semibold text-black dark:text-white">
                       {s.title}
                     </h3>
