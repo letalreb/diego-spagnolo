@@ -1,0 +1,11 @@
+# Diego Spagnolo — sito
+
+Questo sito contiene una presentazione personale, una selezione di progetti e i contatti.
+
+Contenuti principali:
+- / : Home (chi sono, progetti, servizi, contatti)
+
+Contatto:
+- Email: hello@diegospagnolo.com
+
+Nota: alcune informazioni potrebbero essere sintetiche; se serve un dettaglio, chiedi via email.
