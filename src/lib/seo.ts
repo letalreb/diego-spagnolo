@@ -22,6 +22,16 @@ export function jsonLdPerson() {
     "@type": "Person",
     name: site.name,
     url: site.url,
+    email: "mailto:diego.spagnolo.mi@gmail.com",
+    telephone: "+39 339 4217253",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Piazza Roma, 30",
+      addressLocality: "Giussano",
+      addressRegion: "MB",
+      postalCode: "20833",
+      addressCountry: "IT",
+    },
     jobTitle: [
       "Dottore Commercialista",
       "Revisore Contabile",

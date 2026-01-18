@@ -9,7 +9,7 @@ export function Footer() {
         </p>
         <div className="flex gap-4 text-sm">
           <a
-            href="mailto:hello@diegospagnolo.com"
+            href="mailto:diego.spagnolo.mi@gmail.com"
             className="text-black/70 hover:text-black dark:text-white/70 dark:hover:text-white"
           >
             Email

@@ -262,17 +262,37 @@ export default function Home() {
                 </p>
                 <div className="mt-7 flex flex-col gap-3 sm:flex-row">
                   <a
-                    href="mailto:hello@diegospagnolo.com"
+                    href="mailto:diego.spagnolo.mi@gmail.com"
                     className="inline-flex items-center justify-center rounded-full bg-black px-6 py-3 text-sm font-medium text-white transition hover:bg-black/90 dark:bg-white dark:text-black dark:hover:bg-white/90"
                   >
-                    hello@diegospagnolo.com
+                    diego.spagnolo.mi@gmail.com
                   </a>
-                  <button
-                    type="button"
+                  <a
+                    href="mailto:diego.spagnolo@arubapec.it"
                     className="inline-flex items-center justify-center rounded-full border border-black/10 bg-white px-6 py-3 text-sm font-medium text-black transition hover:bg-black/[0.02] dark:border-white/10 dark:bg-black dark:text-white dark:hover:bg-white/10"
                   >
-                    Calendario (opzionale)
-                  </button>
+                    PEC: diego.spagnolo@arubapec.it
+                  </a>
+                </div>
+
+                <div className="mt-6 grid gap-3 text-sm text-black/70 dark:text-white/70 sm:grid-cols-2">
+                  <div>
+                    <div className="text-xs text-black/50 dark:text-white/50">Mobile</div>
+                    <a className="font-medium text-black dark:text-white" href="tel:+393394217253">
+                      +39 339 4217253
+                    </a>
+                  </div>
+                  <div>
+                    <div className="text-xs text-black/50 dark:text-white/50">Ufficio</div>
+                    <a
+                      className="font-medium text-black dark:text-white"
+                      href="https://www.google.com/maps/search/?api=1&query=Piazza%20Roma%2C%2030%20-%2020833%20Giussano%20(MB)"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Piazza Roma, 30 — 20833 Giussano (MB)
+                    </a>
+                  </div>
                 </div>
                 <p className="mt-4 text-xs text-black/50 dark:text-white/50">
                   Nota: l’assistente AI fornisce informazioni generali e non sostituisce una

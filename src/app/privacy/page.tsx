@@ -21,7 +21,7 @@ export default function PrivacyPage() {
           contatti, basi giuridiche, ecc.).
         </p>
         <p className="mt-4 text-sm text-black/60 dark:text-white/60">
-          Contatto: hello@diegospagnolo.com · {site.url}
+          Contatto: diego.spagnolo.mi@gmail.com · PEC: diego.spagnolo@arubapec.it · {site.url}
         </p>
       </Container>
     </Section>
